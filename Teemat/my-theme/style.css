@@ -1,0 +1,134 @@
+/*
+Theme Name: Albert 2
+Text Domain: Albert 2
+Version: 1.0
+Description: Toka teema
+Tags: eka, teema
+Author: Albert
+Author URI: www.google.fi
+*/
+#carouselExampleCaptions {
+    height: 25%;
+}
+
+.grid-container p {
+    text-align: justify;
+    text-justify: inter-word;
+    padding-left: 1em;
+}
+
+
+img {
+    max-width: 100%;
+}
+
+.custom-logo {
+    max-height: 50px;
+    max-width: 100px;
+}
+
+.col ul {
+    justify-content: center;
+    display: flex;
+    list-style: none;
+  }
+
+  .item-a {
+    grid-area: header;
+  }
+  .item-b {
+    grid-area: main;
+  }
+  .item-c {
+    grid-area: sidebar;
+    padding-right: 20px;
+    max-width: 30em;
+    min-width: 30em;
+    max-height: 20em;
+    min-height: 20em;
+  }
+  .item-d {
+    grid-area: footer;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: 25% 25% 10% 40% ;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "header header header header"
+      "main main . sidebar"
+      "footer footer footer footer";
+  }
+
+.page-numbers {
+    display: inline-block;
+    padding: 10px;
+    border: solid thin #aaa;
+    text-decoration: none;
+} 
+ 
+
+/* menu    */
+#menu-main-menu {
+    display: flex;
+    position: relative;
+    z-index: 2;
+    margin: 0;
+}
+
+#menu-main-menu li:hover > .sub-menu {
+    display: block;
+}
+
+#menu-main-menu li:hover > a {
+    color: white;
+}
+
+li:hover > .sub-menu  {
+    background-color: rgb(244,249,250);
+}
+
+#menu-main-menu li:hover, .sub-menu li:hover {
+    background-color: grey;
+}
+
+#menu-main-menu li{
+    padding: 4px;
+    list-style:none;
+}
+
+#menu-main-menu a {
+    text-decoration: none;
+}
+
+#menu-main-menu .sub-menu {
+    position: absolute;
+    left: 0px;
+    display: none;
+}
+
+.sub-menu {
+
+}
+
+.d-flex {
+    position: absolute;
+    right: 0;
+    padding-right: 1em;
+}
+/* -- */
+
+@media only screen and (max-width: 991px) {
+    #menu-main-menu {
+        display: block;
+        padding : 0;
+        position: relative;
+        z-index: 1;
+        margin: 0;
+    }
+
+    .d-flex {
+        position: static;
+    }
+}
